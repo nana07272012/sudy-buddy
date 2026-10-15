@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff4f8">
+<title>きみの勉強応援室 ♡</title>
+<style>
+:root{--pink:#ed9fc2;--pink-dark:#a94d78;--bg:#fff6fa;--card:#fff;--ink:#70465a;--muted:#ad8498;--line:#f4dce7;--accent:#f8d8e7}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fff4f8,#fffafd 55%,#fff5fa);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:0} .app{max-width:720px;margin:auto;padding:16px 14px 36px}
+header{display:flex;align-items:center;gap:12px;margin:6px 2px 18px}.logo{width:48px;height:48px;border-radius:17px;background:#f7d4e4;display:grid;place-items:center;font-size:25px;box-shadow:0 5px 14px #e9b9d055}.brand{font-weight:850;font-size:19px;letter-spacing:.02em}.subtitle{font-size:12px;color:var(--muted);margin-top:3px}
+.tabs{display:flex;gap:7px;padding:5px;background:#fbe8f0;border-radius:16px;margin-bottom:15px}.tab{flex:1;padding:11px 5px;border-radius:12px;background:transparent;color:#a56a86;font-size:13px;font-weight:700}.tab.active{background:white;color:var(--pink-dark);box-shadow:0 3px 10px #d99bb51a}
+.panel{background:var(--card);border:1px solid #f8e5ed;border-radius:22px;padding:17px;box-shadow:0 8px 25px #d7a9bd12;margin-bottom:14px}.hero{background:linear-gradient(135deg,#fff,#fff0f6);text-align:center;padding:20px 17px}.avatar{width:126px;height:126px;border-radius:30px;object-fit:cover;background:#ffe7f1;border:4px solid white;box-shadow:0 5px 18px #d79bb533}.name{font-size:22px;font-weight:850;margin:11px 0 3px}.tag{display:inline-block;background:#fff0f6;color:#bd7093;border-radius:99px;padding:5px 10px;font-size:12px}.bubble{background:#fff0f6;border-radius:18px;padding:14px 15px;text-align:left;line-height:1.75;font-size:14px;margin:15px 0 10px;white-space:pre-wrap}.stats{display:flex;gap:9px}.stat{flex:1;background:#fff8fb;border:1px solid #f8e5ed;border-radius:16px;padding:12px;text-align:center}.stat strong{display:block;font-size:21px;color:#bd7093}.stat span{font-size:11px;color:var(--muted)}
+h2{font-size:17px;margin:0 0 13px}h3{font-size:14px;margin:0 0 8px}.muted{font-size:12px;color:var(--muted);line-height:1.6}.btn{padding:12px 15px;border-radius:14px;background:var(--pink);color:white;font-weight:800;box-shadow:0 4px 10px #e5a3c255}.btn.secondary{background:#fff0f6;color:#a95b7e;box-shadow:none;border:1px solid #f4d9e6}.btn.ghost{background:white;color:#a95b7e;box-shadow:none;border:1px solid var(--line)}.btn.danger{background:#fff1f1;color:#b75a69;box-shadow:none}.btnrow{display:flex;gap:8px;flex-wrap:wrap}.btnrow .btn{flex:1}
+label{display:block;font-size:12px;font-weight:800;color:#9f6881;margin:12px 0 6px}input,textarea,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:13px;background:#fffafd;color:var(--ink);outline:none}input:focus,textarea:focus,select:focus{border-color:#e7a2c1;box-shadow:0 0 0 3px #fce8f1}textarea{resize:vertical;min-height:75px;line-height:1.6}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.char-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.char-card{border:1px solid var(--line);border-radius:17px;padding:10px;background:#fffafd;text-align:left;color:var(--ink);min-width:0}.char-card.selected{border:2px solid var(--pink);padding:9px;background:#fff3f8}.char-card img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;background:#ffe8f2}.char-card strong{display:block;margin:7px 0 3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.char-card small{color:var(--muted)}.record{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #f7e7ee}.record:last-child{border-bottom:0}.record .emoji{font-size:22px}.record-info{flex:1;min-width:0}.record-info strong{display:block;font-size:14px}.record-info small{color:var(--muted);font-size:11px}.record-time{font-weight:850;color:#b76c90}.empty{text-align:center;padding:20px 8px;color:var(--muted);font-size:13px}.hidden{display:none!important}.notice{font-size:11px;color:#ad8498;line-height:1.7;margin-top:12px}.preview{display:flex;gap:12px;align-items:center}.preview img{width:76px;height:76px;object-fit:cover;border-radius:17px;background:#ffe8f2}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#70465a;color:white;padding:11px 16px;border-radius:99px;font-size:13px;box-shadow:0 5px 18px #70465a33;z-index:10;max-width:90%;text-align:center}.section-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.section-head h2{margin:0}
+@media(min-width:600px){.app{padding:24px}.char-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="logo">♡</div><div><div class="brand">きみの勉強応援室</div><div class="subtitle">きみのペースで、すこしずつ ✧</div></div></header>
+<nav class="tabs" aria-label="メニュー">
+<button class="tab active" data-tab="home">ホーム ♡</button><button class="tab" data-tab="study">勉強記録 ✎</button><button class="tab" data-tab="characters">キャラ設定 🎀</button>
+</nav>
+<main>
+<section id="home">
+<div class="panel hero">
+<img id="homeAvatar" class="avatar" alt="キャラクター画像">
+<div class="name" id="homeName">れんくん</div><span class="tag" id="homePersonality">クールだけど優しい</span>
+<div class="bubble" id="praiseBubble">今日も来たんだな、えらいじゃん♡ 今日は何を勉強する？</div>
+<div class="stats"><div class="stat"><strong id="todayMinutes">0分</strong><span>今日の勉強</span></div><div class="stat"><strong id="totalSessions">0回</strong><span>記録した回数</span></div><div class="stat"><strong id="points">0 pt</strong><span>がんばりポイント</span></div></div>
+<div class="btnrow" style="margin-top:14px"><button class="btn" id="goStudy">勉強を記録する ♡</button><button class="btn secondary" id="goChars">キャラを編集 🎀</button></div>
+</div>
+<div class="panel"><div class="section-head"><h2>きみのキャラたち 💗</h2><button class="btn secondary" id="addFromHome">＋ 追加</button></div><div class="char-list" id="homeCharList" style="margin-top:12px"></div></div>
+<div class="notice">※ この試作品のほめ言葉は、登録した設定をもとに端末内で作るサンプルだよ。本物のAIにつなぐには、あとで安全な設定が必要だよ。</div>
+</section>
+<section id="study" class="hidden">
+<div class="panel"><h2>今日の勉強を記録しよう 📚</h2>
+<label for="subject">教科・やったこと</label><input id="subject" maxlength="60" placeholder="例：英単語、数学の問題集">
+<div class="grid2"><div><label for="minutes">勉強した時間（分）</label><input id="minutes" type="number" min="1" max="1440" value="25"></div><div><label for="studyDate">日付</label><input id="studyDate" type="date"></div></div>
+<label for="memo">ひとことメモ（なくてもOK）</label><textarea id="memo" maxlength="300" placeholder="例：単語を20個覚えた！"></textarea>
+<div class="btnrow" style="margin-top:14px"><button class="btn" id="saveStudy">記録してほめてもらう 💖</button></div>
+</div>
+<div class="panel"><h2>これまでの記録 ✨</h2><div id="records"></div><button class="btn ghost" id="clearRecords" style="margin-top:12px">記録を全部消す</button></div>
+</section>
+<section id="characters" class="hidden">
+<div class="panel"><div class="section-head"><h2>キャラをカスタマイズ 🎀</h2><button class="btn secondary" id="newChar">＋ 新しい子</button></div><p class="muted">画像も名前も口調も、好きなように設定してね♡</p><div id="charEditor"></div></div>
+<div class="panel"><h2>登録しているキャラ 💌</h2><div id="charList" class="char-list"></div><p class="notice">画像はこのブラウザ内に保存されるよ。大きすぎる画像は保存できないことがあるから、スクリーンショットや小さめの画像がおすすめ！</p></div>
+</section>
+</main>
+</div>
+<div id="toast" class="toast hidden" role="status"></div>
+<script>
+const $=id=>document.getElementById(id);
+const placeholder='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240"><rect width="100%" height="100%" rx="35" fill="#ffe7f1"/><text x="50%" y="48%" text-anchor="middle" font-size="76">🎀</text><text x="50%" y="76%" text-anchor="middle" font-size="20" fill="#b76c90">my character</text></svg>`);
+const defaultChar={id:'c1',name:'れんくん',personality:'クールだけど優しい',pronoun:'俺',callName:'きみ',speech:'短めで、少し照れ屋な話し方',sample:'別に心配してたわけじゃないけど、ちゃんと休めよ',image:placeholder};
+let state={chars:[defaultChar],activeId:'c1',logs:[],points:0,lastPraise:''};
+try{const saved=localStorage.getItem('studyBuddy_v1');if(saved){const parsed=JSON.parse(saved);if(parsed&&Array.isArray(parsed.chars)&&parsed.chars.length){state={...state,...parsed}}}}catch(e){}
+let draftImage=null, editingId=null;
+function persist(){try{localStorage.setItem('studyBuddy_v1',JSON.stringify(state))}catch(e){toast('保存できなかったよ💧 画像を小さくしてみてね')}} 
+function active(){return state.chars.find(c=>c.id===state.activeId)||state.chars[0]}
+function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(s){$('toast').textContent=s;$('toast').classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.add('hidden'),2400)}
+function setTab(tab){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));['home','study','characters'].forEach(id=>$(id).classList.toggle('hidden',id!==tab));render()}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>setTab(b.dataset.tab)));
+$('goStudy').onclick=()=>setTab('study');$('goChars').onclick=()=>setTab('characters');$('addFromHome').onclick=()=>{setTab('characters');newCharacter()};$('newChar').onclick=()=>newCharacter();
+function praiseFor(c,log){const n=c.callName||'きみ',m=log?log.minutes:0,s=log?log.subject:'';let start;
+if(c.personality.includes('明る'))start=`${n}、${m}分もがんばったの！？すっごーいっ！`;
+else if(c.personality.includes('甘やか'))start=`${n}、${m}分もがんばれたね♡ えらいえらい、少し休も？`; 
+else if(c.personality.includes('丁寧')||c.personality.includes('落ち着'))start=`${n}、${m}分の勉強おつかれさま。今日も一歩進めたね`;
+else start=`${n}、${m}分もやったのか……偉いじゃん`;
+if(c.personality.includes('甘やか'))start=`${n}、${m}分もがんばれたね♡ えらいえらい、少し休も？`;
+if(s)start+=` 「${s}」に取り組んだのもいいね。`;
+if(c.speech)start+=' '+c.speech.split(/[。！!？?]/)[0]+'感じで、';
+if(c.sample) return `「${start} ${c.sample}」`;
+return `「${start} 今日もおつかれさま♡」`;}
+function renderHome(){const c=active();$('homeAvatar').src=c.image||placeholder;$('homeName').textContent=c.name||'なまえ未設定';$('homePersonality').textContent=c.personality||'プロフィール未設定';$('praiseBubble').textContent=state.lastPraise||`今日も来たんだな、えらいじゃん♡ 今日は何を勉強する？`;const today=new Date().toISOString().slice(0,10);$('todayMinutes').textContent=state.logs.filter(l=>l.date===today).reduce((s,l)=>s+l.minutes,0)+'分';$('totalSessions').textContent=state.logs.length+'回';$('points').textContent=state.points+' pt';$('homeCharList').innerHTML=state.chars.map(c=>`<button class="char-card ${c.id===state.activeId?'selected':''}" data-pick="${safe(c.id)}"><img src="${c.image||placeholder}" alt=""><strong>${safe(c.name)}</strong><small>${safe(c.personality)}</small></button>`).join('');$('homeCharList').querySelectorAll('[data-pick]').forEach(b=>b.onclick=()=>{state.activeId=b.dataset.pick;persist();render();toast('応援してくれる子を変更したよ♡')})}
+function renderRecords(){if(!state.logs.length){$('records').innerHTML='<div class="empty">まだ記録はないよ♡ 最初の一歩を残そう！</div>';return} $('records').innerHTML=state.logs.slice().reverse().map(l=>`<div class="record"><div class="emoji">🌷</div><div class="record-info"><strong>${safe(l.subject)}</strong><small>${safe(l.date)}${l.memo?' · '+safe(l.memo):''}</small></div><div class="record-time">${l.minutes}分</div></div>`).join('')}
+function renderCharList(){ $('charList').innerHTML=state.chars.map(c=>`<button class="char-card ${c.id===state.activeId?'selected':''}" data-pick="${safe(c.id)}"><img src="${c.image||placeholder}" alt=""><strong>${safe(c.name)}</strong><small>${safe(c.personality)}</small></button>`).join('');$('charList').querySelectorAll('[data-pick]').forEach(b=>b.onclick=()=>{state.activeId=b.dataset.pick;editingId=b.dataset.pick;draftImage=null;render();toast('この子を選んだよ♡')})}
+function renderEditor(){const c=state.chars.find(x=>x.id===editingId)||active();if(!c){$('charEditor').innerHTML='';return}
+$('charEditor').innerHTML=`<div class="preview"><img id="draftPreview" src="${c.image||placeholder}" alt="画像プレビュー"><div><strong>${safe(c.name||'新しいキャラ')}</strong><div class="muted">画像を選んで、自分だけの子にしよう♡</div></div></div>
+<label for="photo">キャラの画像</label><input id="photo" type="file" accept="image/*"><p class="muted">iPhoneの写真から選べるよ。画像はこの端末のブラウザ内に保存されるよ。</p>
+<label for="cname">名前</label><input id="cname" maxlength="40" value="${safe(c.name)}" placeholder="例：れんくん">
+<label for="cpersonality">性格</label><input id="cpersonality" maxlength="100" value="${safe(c.personality)}" placeholder="例：クールだけど優しい">
+<div class="grid2"><div><label for="cpronoun">一人称</label><input id="cpronoun" maxlength="30" value="${safe(c.pronoun)}" placeholder="俺、僕、私"></div><div><label for="ccall">呼び方</label><input id="ccall" maxlength="30" value="${safe(c.callName)}" placeholder="きみ、名前"></div></div>
+<label for="cspeech">話し方の設定</label><textarea id="cspeech" maxlength="500" placeholder="例：短め、照れ屋、語尾はやさしく">${safe(c.speech)}</textarea>
+<label for="csample">セリフの見本</label><textarea id="csample" maxlength="1000" placeholder="この子らしいセリフを書いてね">${safe(c.sample)}</textarea>
+<div class="btnrow" style="margin-top:14px"><button class="btn" id="saveChar">この設定を保存 ♡</button><button class="btn secondary" id="testPraise">ほめ言葉を試す ✨</button></div>
+<div class="btnrow" style="margin-top:8px"><button class="btn ghost" id="newAnother">別のキャラを追加 ＋</button>${state.chars.length>1?'<button class="btn danger" id="deleteChar">このキャラを削除</button>':''}</div>`;
+$('photo').onchange=async e=>{const file=e.target.files?.[0];if(!file)return;if(!file.type.startsWith('image/')){toast('画像ファイルを選んでね');return}try{draftImage=await resizeImage(file);$('draftPreview').src=draftImage;toast('画像を読み込んだよ♡')}catch(err){toast('画像を読み込めなかったよ')}};$('saveChar').onclick=saveCharacter;$('testPraise').onclick=()=>{const temp=readEditor(c);state.lastPraise=praiseFor(temp,{minutes:25,subject:'今日の勉強'});renderHome();toast('ほめ言葉を作ったよ♡')};$('newAnother').onclick=newCharacter;if($('deleteChar'))$('deleteChar').onclick=()=>{if(!confirm('このキャラを削除する？'))return;state.chars=state.chars.filter(x=>x.id!==c.id);if(!state.chars.length)state.chars=[{...defaultChar,id:crypto.randomUUID()}];if(state.activeId===c.id)state.activeId=state.chars[0].id;editingId=state.activeId;draftImage=null;persist();render();toast('キャラを削除したよ')}}
+function readEditor(c){return {...c,name:$('cname').value.trim()||'なまえ未設定',personality:$('cpersonality').value.trim()||'やさしい',pronoun:$('cpronoun').value.trim()||'私',callName:$('ccall').value.trim()||'きみ',speech:$('cspeech').value.trim(),sample:$('csample').value.trim(),image:draftImage||c.image||placeholder}}
+function saveCharacter(){const old=state.chars.find(x=>x.id===editingId)||active();const updated=readEditor(old);state.chars=state.chars.map(c=>c.id===old.id?updated:c);state.activeId=old.id;draftImage=null;persist();render();toast('キャラ設定を保存したよ♡')}
+function newCharacter(){const c={id:crypto.randomUUID(),name:'新しいキャラ',personality:'やさしくて応援上手',pronoun:'私',callName:'きみ',speech:'明るくてあたたかい話し方',sample:'今日もがんばったね♡',image:placeholder};state.chars.push(c);state.activeId=c.id;editingId=c.id;draftImage=null;persist();render();toast('新しいキャラを追加したよ♡')}
+function resizeImage(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=reject;reader.onload=()=>{const img=new Image();img.onerror=reject;img.onload=()=>{const max=600,scale=Math.min(1,max/Math.max(img.width,img.height)),canvas=document.createElement('canvas');canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);resolve(canvas.toDataURL('image/jpeg',.78))};img.src=reader.result};reader.readAsDataURL(file)})}
+function render(){renderHome();renderRecords();renderCharList();renderEditor()}
+$('saveStudy').onclick=()=>{const minutes=Number($('minutes').value),subject=$('subject').value.trim()||'勉強',date=$('studyDate').value||new Date().toISOString().slice(0,10),memo=$('memo').value.trim();if(!Number.isFinite(minutes)||minutes<1||minutes>1440){toast('時間は1〜1440分で入れてね');return}const log={id:crypto.randomUUID(),minutes,subject,date,memo};state.logs.push(log);state.points+=10;state.lastPraise=praiseFor(active(),log);persist();$('subject').value='';$('memo').value='';render();setTab('home');toast('記録できたよ！今日もえらいっ♡')};
+$('clearRecords').onclick=()=>{if(!confirm('勉強記録を全部消す？この操作は戻せないよ'))return;state.logs=[];state.points=0;persist();render();toast('記録を消したよ')};
+$('studyDate').value=new Date().toISOString().slice(0,10);editingId=active().id;render();
+</script>
+</body>
+</html>
